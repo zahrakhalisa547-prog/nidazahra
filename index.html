@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SehatBersama - Portal Kesehatan Anda</title>
+    <style>
+        /* Pengaturan Dasar (Reset & Styling Umum) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigasi / Header */
+        header {
+            background-color: #2b7a78;
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #feffff;
+            text-decoration: underline;
+        }
+
+        /* Bagian Utama / Hero Section */
+        .hero {
+            background: linear-gradient(rgba(43, 122, 120, 0.7), rgba(43, 122, 120, 0.7)), url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: #3aafa9;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #2b7a78;
+        }
+
+        /* Konten Utama / Artikel */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2b7a78;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            margin-bottom: 10px;
+            color: #17252a;
+        }
+
+        .card-content p {
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        /* Tips Kesehatan Singkat */
+        .tips-section {
+            background-color: #def2f1;
+            padding: 40px 20px;
+            margin-top: 50px;
+            border-radius: 8px;
+        }
+
+        .tips-section h2 {
+            color: #2b7a78;
+            margin-bottom: 20px;
+        }
+
+        .tips-section ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        .tips-section li {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #17252a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigasi -->
+    <header>
+        <div class="logo">🩺 SehatBersama</div>
+        <nav>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#artikel">Artikel</a></li>
+                <li><a href="#tips">Tips Sehat</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bagian Hero -->
+    <section class="hero">
+        <h1>Wujudkan Hidup Sehat Mulai Dari Sekarang</h1>
+        <p>Temukan informasi, artikel, dan tips kesehatan terpercaya untuk Anda dan keluarga.</p>
+        <a href="#artikel" class="btn">Mulai Membaca</a>
+    </section>
+
+    <!-- Konten Artikel -->
+    <div class="container" id="artikel">
+        <h2 class="section-title">Artikel Kesehatan Terbaru</h2>
+        
+        <div class="articles-grid">
+            <!-- Artikel 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=500&q=80" alt="Makanan Sehat">
+                <div class="card-content">
+                    <h3>Pentingnya Makanan Bergizi Seimbang</h3>
+                    <p>Konsumsi buah, sayur, dan protein yang cukup setiap hari untuk menjaga daya tahan tubuh agar tetap bugar.</p>
+                </div>
+            </div>
+
+            <!-- Artikel 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=500&q=80" alt="Olahraga">
+                <div class="card-content">
+                    <h3>Manfaat Olahraga 30 Menit Sehari</h3>
+                    <p>Olahraga ringan secara rutin dapat meningkatkan kesehatan jantung, mengurangi stres, dan memperbaiki kualitas tidur.</p>
+                </div>
+            </div>
+
+            <!-- Artikel 3 -->
+ee            <div class="card">
+                <img src="https://images.unsplash.com/photo-1541108573791-23ee40149878?auto=format&fit=crop&w=500&q=80" alt="Tidur Cukup">
+                <div class="card-content">
+                    <h3>Mengapa Tidur Cukup Sangat Vital?</h3>
+                    <p>Kurang tidur dapat memicu berbagai penyakit kronis. Pastikan Anda tidur 7-8 jam setiap malam untuk pemulihan tubuh yang optimal.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tips Kesehatan -->
+        <div class="tips-section" id="tips">
+            <h2>Tips Hidup Sehat Setiap Hari</h2>
+            <ul>
+                <li>Minum air putih minimal 8 gelas (2 liter) sehari untuk mencegah dehidrasi.</li>
+                <li>Kelola stres dengan baik melalui meditasi atau melakukan hobi yang menyenangkan.</li>
+                <li>Batasi konsumsi makanan dan minuman tinggi gula serta garam berlebih.</li>
+                <li>Lakukan pemeriksaan kesehatan (medical check-up) secara berkala.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="kontak">
+        <p>&copy; 2026 SehatBersama. Seluruh hak cipta dilindungi. | Dibuat untuk Anda yang peduli kesehatan.</p>
+    </footer>
+
+</body>
+</html>
